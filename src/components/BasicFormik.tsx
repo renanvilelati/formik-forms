@@ -31,8 +31,6 @@ function BasicFormik() {
     onSubmit,
   });
 
-  console.log(errors);
-
   return (
     <form onSubmit={handleSubmit}>
       <label>E-mail</label>

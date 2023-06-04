@@ -35,3 +35,21 @@ export const basicSchema = yup.object().shape({
     .oneOf([yup.ref('password')], 'Passwords must match')
     .required(requiredError),
 });
+
+export const advancedSchema = yup.object().shape({
+  first_name: yup
+    .string()
+    .min(3, 'First name must be at least 3 characters long')
+    .required(requiredError),
+  last_name: yup
+    .string()
+    .min(3, 'Last name must be at least 3 characters long')
+    .required(requiredError),
+  jobType: yup
+    .string()
+    .oneOf(['designer', 'developer', 'manager', 'other'], 'escolha um')
+    .required(requiredError),
+  acceptedTos: yup
+    .boolean()
+    .oneOf([true], 'Please accept the terms of service'),
+});
