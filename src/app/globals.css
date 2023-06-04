@@ -15,7 +15,8 @@ body {
 }
 
 input,
-button {
+button,
+select {
   padding: 1rem 2rem;
   border: 0;
   border-radius: 4px;
@@ -37,7 +38,8 @@ form {
   flex-direction: column;
 }
 
-form input {
+form input,
+form select {
   background: #222;
   color: #fff;
 }
@@ -54,4 +56,8 @@ form .input-wrapper {
 button:disabled {
   background-color: gray;
   opacity: 0.5;
+}
+
+.input_error {
+  color: red;
 }
